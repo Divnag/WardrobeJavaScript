@@ -1,0 +1,31 @@
+﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model IEnumerable<WardrobeDBFirstMVC.Models.Bottom>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    <a class="glyphicon glyphicon-new-window btn btn-default" href="@Url.Action("Create", "Bottoms")"></a>
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption ">
+                    <p>
+                        <img src=" @Html.DisplayFor(modelItem => item.BottomPhoto)" class="image" height="100" width="100" />
+                    </p>
+
+                    <p>
+
+                        <a class="glyphicon glyphicon-tag btn btn-default" href=" @Url.Action( "Details", new { id=item.BottomID })"></a>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

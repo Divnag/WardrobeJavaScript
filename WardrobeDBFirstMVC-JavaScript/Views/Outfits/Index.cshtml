@@ -1,0 +1,69 @@
+﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model IEnumerable<WardrobeDBFirstMVC.Models.Outfit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<p>
+   <a class="glyphicon glyphicon-new-window btn btn-default"href=" @Url.Action("Create", "Outfits")"></a>
+</p>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <p>
+                        <img src=" @Html.DisplayFor(modelItem => item.Top.TopPhoto)" height="100" width="100" />
+                    </p>
+
+                    <p>
+                        <img src=" @Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" height="100" width="100" />
+                    </p>
+                    <p>
+                        <img src=" @Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" height="100" width="100" />
+                    </p>
+                    @*<p>
+                            @Html.DisplayFor(modelItem => item.Accessory.AccessName)
+                        </p>*@
+                    <p>
+                        <img src=" @Html.DisplayFor(modelItem => item.Accessory.AccessPhoto)" height="100" width="100" />
+                    </p>
+
+                    @*<p>
+                            @Html.DisplayFor(modelItem => item.Bottom.BottomName)
+                        </p>*@
+
+                    @*<p>
+                            @Html.DisplayFor(modelItem => item.Occassion.Occassion1)
+                        </p>
+                        <p>
+                            @Html.DisplayFor(modelItem => item.Season.Season)
+                        </p>*@
+                    @*<p>
+                            @Html.DisplayFor(modelItem => item.Shoe.ShoeName)
+                        </p>*@
+
+                    @*<p>
+                            @Html.DisplayFor(modelItem => item.Top.TopName)
+                        </p>*@
+
+                    <p>
+                        <a class="glyphicon glyphicon-edit btn btn-default" href=" @Url.Action("Edit", new { id = item.OutfitID })"></a>
+                        <a class=" glyphicon glyphicon-search btn btn-default" href="@Url.Action("Details", new { id = item.OutfitID })"></a>
+                        <a class="glyphicon glyphicon-erase btn btn-default" href="@Url.Action("Delete", new { id = item.OutfitID })"></a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    }
+       </div>
+
+

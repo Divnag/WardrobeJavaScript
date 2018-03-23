@@ -1,0 +1,38 @@
+﻿
+<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model IEnumerable<WardrobeDBFirstMVC.Models.Accessory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<p>
+   <a class="glyphicon glyphicon-new-window btn btn-default "href="@Url.Action("Create", "Accessories")"></a>
+</p>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+
+            <div class="col-md-2">
+                <div class="thumbnail ">
+                    <div class="caption">
+
+                        <p>
+                            <img src="@Html.DisplayFor(modelItem => item.AccessPhoto)" class="image" />
+                        </p>
+
+                        <p>
+                           
+                            <a class="glyphicon glyphicon-tag btn btn-default"href="@Url.Action("Details", new { id = item.AccessID })"></a> 
+                          
+                        </p>
+                    </div>
+                </div>
+           </div>
+        }
+    </div>
+
+

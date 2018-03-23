@@ -1,0 +1,49 @@
+﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model IEnumerable<WardrobeDBFirstMVC.Models.Shoe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<p>
+   <a class="glyphicon glyphicon-new-window btn btn-default" href=" @Url.Action("Create", "Shoes")"></a>
+</p>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+
+                    @*<p>
+                        @Html.DisplayNameFor(model => model.ShoeName): @Html.DisplayFor(modelItem => item.ShoeName)
+                    </p>*@
+                    <p>
+                        <img src=" @Html.DisplayFor(modelItem => item.ShoePhoto)" class="image"height="100" width="100" />
+                    </p>
+                    @*<p>
+                        @Html.DisplayNameFor(model => model.Color): @Html.DisplayFor(modelItem => item.Color)
+                    </p>
+                    <p>
+                        @Html.DisplayNameFor(model => model.Occassion):@Html.DisplayFor(modelItem => item.Occassion.Occassion1)
+                    </p>
+                    <p>
+                        @Html.DisplayNameFor(model => model.Season):@Html.DisplayFor(modelItem => item.Season.Season)
+                    </p>*@
+                    
+                    <p>
+                        @*@Html.ActionLink("Edit", "Edit", new { id = item.ShoeID }) |*@
+                        <a class=" glyphicon glyphicon-tag btn btn-default" href="@Url.Action("Details", new { id = item.ShoeID })"> </a>
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.ShoeID })*@
+                    </p>
+                        
+                </div>
+            </div>
+        </div>
+        
+    }
+        </div>
+
+    </table>
