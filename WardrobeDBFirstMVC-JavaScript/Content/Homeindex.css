@@ -27,16 +27,17 @@ ul.nav.navbar-nav{
     border-bottom: 4px solid #4b0202;
 }
 
-.jumbotron-titlebox {
+#jumbotron-titlebox {
     background-color: rgba(181, 177, 175, .6);
     padding: 10px;
     color:#4b0202;
 }
 
-.jumbotron h1 {
-    font-family: 'Julius Sans One', sans-serif;
-    text-transform: capitalize
-}
+ #jumbotron-titlebox h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        text-transform: capitalize;
+        color:#4b0202;
+    }
 
 .col-md-3 h2 {
     color: #4b0202;

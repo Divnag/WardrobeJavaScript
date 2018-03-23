@@ -243,6 +243,7 @@
     <Content Include="Content\images\tunic3.jpg" />
     <Content Include="Content\images\tunic4.jpg" />
     <Content Include="Content\images\wardrobe.jpg" />
+    <Content Include="Content\JavaScript.js" />
     <Content Include="Content\StyleSheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

@@ -2,81 +2,89 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <link href="~/Content/Homeindex.css" rel="stylesheet" />
 
+
+
 @{
-    ViewBag.Title = "Home Page";
-}
+    ViewBag.Title = "Home Page";}
 
-<div class="wow fadeInRight box">
-    <div class="jumbotron">
-        <div class="jumbotron-titlebox">
-            <h1>The Wardrobe App</h1>
-            <h2>Helping to organize and maintain a fabulous wardrobe!</h2>
+<body onload="Greeting()">
+    <div class="wow fadeInRight box">
+        <div class="jumbotron">
+            <div id="jumbotron-titlebox">
+                <h1></h1>
+                <h1>The Wardrobe App</h1>
+                <h2>Helping to organize and maintain a fabulous wardrobe!</h2>
 
-        </div>
-    </div>
-    </div>
-
-<div class="row">
-    <div class="col-md-3">
-        <div class="wow fadeInLeft box">
-            <h2>Tops</h2>
-            <p>
-                Easily add and view all the tops in your wardrobe.
-                Identify them by color, occassion, and season.
-                You can also easily delete items from your wardrobe.
-            </p>
-            <p><a class="btn btn-default" href="@Url.Action("Index","Tops")">More&raquo;</a></p>
             </div>
         </div>
-    <div class="col-md-3">
-        <div class="wow fadeInLeft box">
-            <h2>Bottoms</h2>
-            <p>
-                Add and sort through all of your bottoms, from shorts to dress slacks.
-                Put on a little extra weight? No problem,
-                it's just as easily to delete a old pair and add a
-                new one!
-            </p>
-            <p><a class="btn btn-default" href="@Url.Action("Index","Bottoms")">More &raquo;</a></p>
+    </div>
+
+    <div Id="row">
+        <div class="col-md-3" id="">
+            <div class="wow fadeInLeft box-1">
+                <h2>Tops</h2>
+                <p>
+                    Easily add and view all the tops in your wardrobe.
+                    Identify them by color, occassion, and season.
+                    You can also easily delete items from your wardrobe.
+                </p>
+                <p>
+                    <button type="button" class="btn" onclick="sort()">Search by Seasons!</button>
+
+                </p>
+                <p><a class="btn btn-default" href="@Url.Action("Index","Tops")" target="_blank">More&raquo;</a></p>
             </div>
         </div>
-    <div class="col-md-3">
-        <div class="wow fadeInRight box">
-            <h2>Shoes</h2>
-            <p>
-                Wardrobe helps you organize your shoes by season, color, and occassion.
-                Shoes for the work day, shows for play!.
-                That favorite pair of sneakers getting stinky? Toss em!
-                Delete them from wardrobe and add a new pair!
-            </p>
-            <p><a class="btn btn-default" href="@Url.Action("Index","Shoes")">More&raquo;</a></p>
+        <div class="col-md-3">
+            <div class="wow fadeInLeft box-2">
+                <h2>Bottoms</h2>
+                <p>
+                    Add and sort through all of your bottoms, from shorts to dress slacks.
+                    Put on a little extra weight? No problem,
+                    it's just as easily to delete a old pair and add a
+                    new one!
+                </p>
+                <p><a class="btn btn-default" href="@Url.Action("Index","Bottoms")">More &raquo;</a></p>
+            </div>
         </div>
+        <div class="col-md-3">
+            <div class="wow fadeInRight box-3">
+                <h2>Shoes</h2>
+                <p>
+                    Wardrobe helps you organize your shoes by season, color, and occassion.
+                    Shoes for the work day, shows for play!.
+                    That favorite pair of sneakers getting stinky? Toss em!
+                    Delete them from wardrobe and add a new pair!
+                </p>
+                <p><a class="btn btn-default" href="@Url.Action("Index","Shoes")">More&raquo;</a></p>
+            </div>
         </div>
 
-    <div class="col-md-3">
-        <div class="wow fadeInRight box">
-            <h2>Accessories</h2>
-            <p>
-                Finding right Accessory in the drawer can be difficult.
-                But with Wardrobe, at least you know they're there!
-                Add your watches, scarf, rings, and other accessories with the snap of a finger.
-            </p>
-            <p><a class="btn btn-default" href="@Url.Action("Index","Accessories")">More&raquo;</a></p>
+        <div class="col-md-3">
+            <div class="wow fadeInRight box-4">
+                <h2>Accessories</h2>
+                <p>
+                    Finding right Accessory in the drawer can be difficult.
+                    But with Wardrobe, at least you know they're there!
+                    Add your watches, scarf, rings, and other accessories with the snap of a finger.
+                </p>
+                <p><a class="btn btn-default" href="@Url.Action("Index","Accessories")">More&raquo;</a></p>
+            </div>
+
         </div>
-       
     </div>
-</div>
 
-<!--Initiate WOW js, can be at the bottom of your file -->
-<script>
-    wow = new WOW(
-        {
-            boxClass: 'wow',      // default
-            animateClass: 'animated', // change this if you are not using animate.css
-            offset: 0,          // default
-            mobile: true,       // keep it on mobile
-            live: true        // track if element updates
-        }
-    )
-    wow.init();
-</script>
+</body>
+    <!--Initiate WOW js, can be at the bottom of your file -->
+    <script>
+        wow = new WOW(
+            {
+                boxClass: 'wow',      // default
+                animateClass: 'animated', // change this if you are not using animate.css
+                offset: 0,          // default
+                mobile: true,       // keep it on mobile
+                live: true        // track if element updates
+            }
+        )
+        wow.init();
+    </script>
