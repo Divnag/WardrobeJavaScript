@@ -5,47 +5,46 @@
     x.getElementsByTagName('h1')[0].innerText = 'Welcome ' + userResponse+'  to';
 }
 
+function overBtn(x) {
+    x.style.backgroundColor = "white";
+    x.style.color = "black";
+}
 
-//function sort() {
-//    var response = prompt("Clothes you would like to search?");
-//    var x = document.getElementsByClassName("Season");
-//    var y = document.getElementsByClassName("photos");
-//    var found = new Array(0);
-
-//    for (var i = 0; i < x.length; i++) {
-//        if (x[i].innerText ==response) {
-//                found.push(y[i].innerText);
-//            //found = found +" "+ x[i].innerText;
-           
-//        }
-       
-//    }
-   
-//    alert(response+"Type of Clothes:  "+found);
-//    // for (var i = 0; i < found.length; i++) {
-
-//    //     alert(y[i].innerText);
-
-//    // }
-
-//}
+function outBtn(x) {
+    x.style.backgroundColor = "#474e5d";
+    x.style.color = "white";
+}
 
 
 function myFunction() {
-   
+
     var selection = document.getElementById("mySelect").value;
     var content = document.getElementById('dis');
     var classseason = document.getElementsByClassName("Season");
     var classtype = document.getElementsByClassName("type");
+    var classphoto = document.getElementsByClassName("photo");
     var found = new Array(0);
     for (var i = 0; i < classseason.length; i++) {
         if (classseason[i].innerText == selection) {
+
             found.push(classtype[i].innerText);
-         }
+            classphoto[i].style.display = "block";
+
+        }
 
     }
-      content.innerText ="Collections for your season choice  :"+found;
-   
+
+    content.innerText = "Collections for your season choice  :" + found;
+
+    for (var i = 0; i < classseason.length; i++) {
+        if (classseason[i].innerText != selection) {
+
+            classphoto[i].style.display = "none";
+
+        }
+
+
+    }
 }
 
 function newDoc() {
@@ -161,3 +160,12 @@ function footer() {
     
 }
 
+function GetVilla() {
+    var villaArray = new Array(0);
+    var userResponse = confirm('Would you like to check the availability of a Villa?');
+    while (userResponse) {
+        var villa = prompt('Please enter the name of a villa');
+        userResponse = confirm('Would you like to add another Villa?');
+        villaArray.push(villa);
+    }
+}
