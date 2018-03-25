@@ -1,4 +1,11 @@
-﻿/*navbar classes*/
+﻿.jumbotron {
+    background: none !important;
+    height:10px;
+    
+   
+}
+
+/*navbar classes*/
 .navbar-inverse {
     background-color: #4b0202!important;
    
@@ -42,4 +49,3 @@ ul.nav.navbar-nav {
 :hover.middle {
     opacity: 1;
 }
-

@@ -5,6 +5,7 @@
 /*navbar */
 .navbar-inverse {
     background-color: #4b0202;
+    display:none;
    
 }
 
@@ -17,8 +18,9 @@ ul.nav.navbar-nav{
 }
 /*jumbotron*/
 .jumbotron {
+    margin-top:10%;
     background: url('images/wardrobe.jpg'),no-repeat,center,center;
-    background-size: contain;
+    background-size:contain;
     height: 55vh;
     text-align: center;
     padding-top: 10vh;
@@ -31,12 +33,14 @@ ul.nav.navbar-nav{
     background-color: rgba(181, 177, 175, .6);
     padding: 10px;
     color:#4b0202;
+   
 }
 
- #jumbotron-titlebox h1 {
+    #jumbotron-titlebox h1 {
         font-family: 'Julius Sans One', sans-serif;
         text-transform: capitalize;
-        color:#4b0202;
+        color: #4b0202;
+     font-size:10px;
     }
 
 .col-md-3 h2 {

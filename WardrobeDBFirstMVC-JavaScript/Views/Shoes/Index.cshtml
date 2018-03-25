@@ -7,43 +7,65 @@
 
 
 <p>
-   <a class="glyphicon glyphicon-new-window btn btn-default" href=" @Url.Action("Create", "Shoes")"></a>
+    <a class="glyphicon glyphicon-new-window btn btn-default" href=" @Url.Action("Create", "Shoes")"></a>
 </p>
 
-    <div class="row">
-        @foreach (var item in Model)
-        {
+<div class="row">
+    <div class="col-md-2">
+        <div class="jumbotron">
+            <select id="mySelect" onchange="myFunction()">
+                <option value="Search by season">Search by Season
+                <option value="Summer">Summer
+                <option value="Fall">Fall
+                <option value="Spring">Spring
+                <option value="All Season">All Season
+                <option value="Winter">Winter
+
+            </select>
+
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="jumbotron" id="dis">
+            <p></p>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    @foreach (var item in Model)
+    {
         <div class="col-md-3">
             <div class="thumbnail">
                 <div class="caption">
 
-                    @*<p>
-                        @Html.DisplayNameFor(model => model.ShoeName): @Html.DisplayFor(modelItem => item.ShoeName)
-                    </p>*@
+                    <p class="type">
+                            @Html.DisplayFor(modelItem => item.ShoeName)
+                        </p>
                     <p>
-                        <img src=" @Html.DisplayFor(modelItem => item.ShoePhoto)" class="image"height="100" width="100" />
+                        <img src=" @Html.DisplayFor(modelItem => item.ShoePhoto)" class="image" height="100" width="100" />
                     </p>
                     @*<p>
-                        @Html.DisplayNameFor(model => model.Color): @Html.DisplayFor(modelItem => item.Color)
-                    </p>
-                    <p>
-                        @Html.DisplayNameFor(model => model.Occassion):@Html.DisplayFor(modelItem => item.Occassion.Occassion1)
-                    </p>
-                    <p>
-                        @Html.DisplayNameFor(model => model.Season):@Html.DisplayFor(modelItem => item.Season.Season)
-                    </p>*@
-                    
+                            @Html.DisplayNameFor(model => model.Color): @Html.DisplayFor(modelItem => item.Color)
+                        </p>
+                        <p>
+                            @Html.DisplayNameFor(model => model.Occassion):@Html.DisplayFor(modelItem => item.Occassion.Occassion1)
+                        </p>*@
+                        <p class="Season">
+                            @Html.DisplayFor(modelItem => item.Season.Season)
+                        </p>
+
                     <p>
                         @*@Html.ActionLink("Edit", "Edit", new { id = item.ShoeID }) |*@
                         <a class=" glyphicon glyphicon-tag btn btn-default" href="@Url.Action("Details", new { id = item.ShoeID })"> </a>
                         @*@Html.ActionLink("Delete", "Delete", new { id = item.ShoeID })*@
                     </p>
-                        
+
                 </div>
             </div>
         </div>
-        
-    }
-        </div>
 
-    </table>
+    }
+</div>
+
+  

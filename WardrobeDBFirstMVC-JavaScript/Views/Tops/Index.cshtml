@@ -1,39 +1,65 @@
 ﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+
 @model IEnumerable<WardrobeDBFirstMVC.Models.Top>
 
 @{
     ViewBag.Title = "Index";
 }
 
+@{
+    ViewBag.Title = "Details";
+}
 
 
 <p>
-   <a class="glyphicon glyphicon-new-window  btn btn-default" href="@Url.Action("Create","Tops")"></a>
+    <a class="glyphicon glyphicon-new-window  btn btn-default" href="@Url.Action("Create","Tops")"></a>
 </p>
-<p>
-     <button type="button" class="btn" onclick="sort()">Search by Seasons!</button>
 
-</p>
+<div class="row">
+   <div class="col-md-2">
+        <div class="jumbotron">
+              <select id="mySelect" onchange="myFunction()">
+                <option value="Search by season">Search by Season
+                <option value="Summer">Summer
+                <option value="Fall">Fall
+                <option value="Spring">Spring
+                <option value="All Season">All Season
+                <option value="Winter">Winter
+
+            </select>
+
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="jumbotron" id="dis">
+            <p></p>
+
+        </div>
+    </div>
+</div>
+
+
 <div class="row">
     @foreach (var item in Model)
     {
-        
+
 
         <div class="col-md-3">
             <div class="thumbnail">
                 <div class="caption">
 
-                    <p >
+                    <p>
                         <img src="@Html.DisplayFor(modelItem => item.TopPhoto)" class="image" />
                     </p>
-                    <p class="photos">
+                    <p class="type">
                         @Html.DisplayFor(model => item.TopName)
                     </p>
                     <p class="Season">
                         @Html.DisplayFor(modelItem => item.Season.Season)
                     </p>
                     <p>
-                        <a class=" glyphicon glyphicon-tag btn btn-default" href="@Url.Action( "Details", new { id = item.TopID })">
+
+                        <a class=" glyphicon glyphicon-tag btn btn-default" href="@Url.Action("Details", new { id = item.TopID })">
 
                         </a>
 
@@ -45,5 +71,11 @@
 
     }
 </div>
+
+
+
+
+
+
 
 

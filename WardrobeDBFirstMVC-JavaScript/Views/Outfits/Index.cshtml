@@ -9,6 +9,28 @@
 <p>
    <a class="glyphicon glyphicon-new-window btn btn-default"href=" @Url.Action("Create", "Outfits")"></a>
 </p>
+<div class="row">
+    <div class="col-md-2">
+        <div class="jumbotron">
+            <select id="mySelect" onchange="myFunction()">
+                <option value="Search by season">Search by Season
+                <option value="Summer">Summer
+                <option value="Fall">Fall
+                <option value="Spring">Spring
+                <option value="All Season">All Season
+                <option value="Winter">Winter
+
+            </select>
+
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="jumbotron" id="dis">
+            <p></p>
+
+        </div>
+    </div>
+</div>
 
 <div class="row">
 
@@ -39,12 +61,12 @@
                             @Html.DisplayFor(modelItem => item.Bottom.BottomName)
                         </p>*@
 
-                    @*<p>
+                    <p class="type">
                             @Html.DisplayFor(modelItem => item.Occassion.Occassion1)
                         </p>
-                        <p>
+                        <p class="Season">
                             @Html.DisplayFor(modelItem => item.Season.Season)
-                        </p>*@
+                        </p>
                     @*<p>
                             @Html.DisplayFor(modelItem => item.Shoe.ShoeName)
                         </p>*@
