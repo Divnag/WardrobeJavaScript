@@ -15,7 +15,7 @@
                     <div id="jumbotron-titlebox">
                         <h1 onmouseover="mouseover()" onmouseout="mouseout()"></h1>
                         <h1 onmouseover="mouseover()" onmouseout="mouseout()">The Wardrobe App</h1>
-                        <h2 onmouseover="mouseover()"onmouseout="mouseout()">Helping to organize and maintain a fabulous wardrobe!</h2>
+                        <h2 onmouseover="mouseover()" onmouseout="mouseout()">Helping to organize and maintain a fabulous wardrobe!</h2>
 
                     </div>
 
@@ -23,12 +23,13 @@
                 <input id="buttonloc" type="submit" value="See What is in there" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig', 'swap');">
             </div>
         </div>
-        </div>
+    </div>
 
 
     <div class="row tow" style="display:none" id="swap">
-        
-        <div class="col-md-12">
+
+       
+        <div class="col-md-6">
             <div class="wow fadeInLeft box-1">
                 <h2>Tops</h2>
                 <p>
@@ -39,14 +40,14 @@
                 <p>
 
                     <input type="button" value="Look in Closet" onclick="newDoc()">
-                    @*<a class="btn btn-default" href="@Url.Action("Index","Tops")" target="_blank">More&raquo;</a>*@
+
                 </p>
             </div>
         </div>
 
 
-        
-        <div class="col-md-12">
+       
+        <div class="col-md-6">
             <div class="wow fadeInLeft box-2">
                 <h2>Bottoms</h2>
                 <p>
@@ -58,8 +59,8 @@
                 <p> <input type="button" value="Look in Closet" onclick="newDoc1()"></p>
             </div>
         </div>
-           
-        <div class="col-md-12">
+       
+        <div class="col-md-6">
             <div class="wow fadeInRight box-3">
                 <h2>Shoes</h2>
                 <p>
@@ -71,8 +72,8 @@
                 <p> <input type="button" value="Look in closet" onclick="newDoc2()"></p>
             </div>
         </div>
-
-        <div class="col-md-12">
+        
+        <div class="col-md-6">
             <div class="wow fadeInRight box-4">
                 <h2>Accessories</h2>
                 <p>
@@ -84,8 +85,8 @@
             </div>
 
         </div>
-
-        <div class="col-md-12">
+        
+        <div class="col-md-6">
             <div class="wow fadeInRight box-4">
                 <h2>Outfits</h2>
                 <p>
@@ -97,11 +98,11 @@
             </div>
 
         </div>
-        <p>
+                <p>
             <input id="buttonloc" type="submit" value="go back " onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig', 'swap');">
         </p>
     </div>
-
+     
 </body>
     <!--Initiate WOW js, can be at the bottom of your file -->
     <script>

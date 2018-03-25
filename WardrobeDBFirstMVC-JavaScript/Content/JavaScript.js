@@ -137,6 +137,7 @@ function SwapDivsWithClick(div1, div2) {
 function mouseover() {
     var x = document.getElementById("jumbotron-titlebox");
     x.getElementsByTagName("h1")[0].style.fontSize = "50px";
+    x.getElementsByTagName("h1")[1].style.fontSize = "50px";
     x.getElementsByTagName("h2")[0].style.fontSize = "50px";
     x.getElementsByTagName("h1")[0].style.color = "black";
     x.getElementsByTagName("h1")[1].style.color = "black";
@@ -151,3 +152,12 @@ function mouseout() {
     x.getElementsByTagName("h1")[1].style.color = "#4b0202";
     x.getElementsByTagName("h2")[0].style.color = "#4b0202";
 }
+
+function footer() {
+    var x = document.getElementById("subheaderbar2");
+    x.getElementsByTagName("p")[0].innerText = "Created by Divya";
+    x.getElementsByTagName("p")[0].style.fontSize = "20px";
+    x.getElementsByTagName("p")[0].style.color = "#4b0202";
+    
+}
+

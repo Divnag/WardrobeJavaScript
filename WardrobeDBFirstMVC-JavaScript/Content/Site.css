@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:gainsboro;
+    background-color:white;/*gainsboro*/;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,3 +23,13 @@ select,
 textarea {
     max-width: 280px;
 }
+.row #subheaderbar2 {
+    text-align: center;
+    color: white;
+    background-color: #474e5d;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 35px;
+    
+}
+

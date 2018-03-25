@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
     <script src="~/Content/JavaScript.js"></script>
 </head>
-<body >
+<body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -27,16 +27,23 @@
                     <li>@Html.ActionLink("Shoes", "Index", "Shoes")</li>
                     <li>@Html.ActionLink("Accessories", "Index", "Accessories")</li>
                     <li>@Html.ActionLink("Outfits", "Index", "Outfits")</li>
-                    
+
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-        
+        <footer>
+            <div class="row">
+                <div id="subheaderbar2" onclick="footer()">
+                <p>Copyright &copy; @DateTime.Now.Year</p>
+            </div>
+           </div>
+            
+        </footer>
     </div>
-
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
