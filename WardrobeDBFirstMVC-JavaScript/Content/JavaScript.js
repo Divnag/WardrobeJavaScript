@@ -170,17 +170,24 @@ function numberguess() {
         use.push(userResponse);
     }
 
-    alert("you are numbers :"+use);
-   for (var i = 0; i < 3; i++) {
+
+    alert('Random Number was ' + x)
+    alert("you are numbers :" + use);
+   
+    for (var i = 0; i < 3; i++)
+     {
         if (x == use[i]) {
-            alert('You guessed Correct')
+            alert('Youre  guessed Correct')
+           
         }
-        
+        else {
+            alert('Youre guessed Wrong')
+        }
+       
     }
    
-   alert('You guessed Wrong')
-    alert('Random Number was ' + x)
-}
+   
+   }
 
 
     
