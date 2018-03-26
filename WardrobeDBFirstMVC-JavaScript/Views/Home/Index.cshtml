@@ -8,6 +8,11 @@
     ViewBag.Title = "Home Page";}
 
 <body onload="Greeting()">
+    <p>
+
+        <input type="button" value="Want to Play a Game" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="numberguess()">
+
+    </p>
     <div class="row" id="orig">
         <div class="col-md-12">
             <div class="wow fadeInRight box">
@@ -20,7 +25,7 @@
                     </div>
 
                 </div>
-                <input id="buttonloc" type="submit"  value="See What is in there" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig', 'swap');">
+                <input id="buttonloc" type="submit" value="See What is in there" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig', 'swap');">
             </div>
         </div>
     </div>
@@ -28,7 +33,7 @@
 
     <div class="row tow" style="display:none" id="swap">
 
-       
+
         <div class="col-md-6">
             <div class="wow fadeInLeft box-1">
                 <h2>Tops</h2>
@@ -39,14 +44,14 @@
                 </p>
                 <p>
 
-                    <input type="button" value="Look in Closet" onmouseover="overBtn(this)" onmouseout="outBtn(this)"onclick="newDoc()">
+                    <input type="button" value="Look in Closet" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="newDoc()">
 
                 </p>
             </div>
         </div>
 
 
-       
+
         <div class="col-md-6">
             <div class="wow fadeInLeft box-2">
                 <h2>Bottoms</h2>
@@ -56,10 +61,10 @@
                     it's just as easily to delete a old pair and add a
                     new one!
                 </p>
-                <p> <input type="button" value="Look in Closet" onmouseover="overBtn(this)" onmouseout="outBtn(this)"onclick="newDoc1()"></p>
+                <p> <input type="button" value="Look in Closet" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="newDoc1()"></p>
             </div>
         </div>
-       
+
         <div class="col-md-6">
             <div class="wow fadeInRight box-3">
                 <h2>Shoes</h2>
@@ -69,10 +74,10 @@
                     That favorite pair of sneakers getting stinky? Toss em!
                     Delete them from wardrobe and add a new pair!
                 </p>
-                <p> <input type="button" value="Look in closet"onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="newDoc2()"></p>
+                <p> <input type="button" value="Look in closet" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="newDoc2()"></p>
             </div>
         </div>
-        
+
         <div class="col-md-6">
             <div class="wow fadeInRight box-4">
                 <h2>Accessories</h2>
@@ -81,11 +86,11 @@
                     But with Wardrobe, at least you know they're there!
                     Add your watches, scarf, rings, and other accessories with the snap of a finger.
                 </p>
-                <p> <input type="button" value="Look in Closet" onmouseover="overBtn(this)" onmouseout="outBtn(this)"onclick="newDoc3()"></p>
+                <p> <input type="button" value="Look in Closet" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="newDoc3()"></p>
             </div>
 
         </div>
-        
+
         <div class="col-md-6">
             <div class="wow fadeInRight box-4">
                 <h2>Outfits</h2>
@@ -94,15 +99,15 @@
                     But with Wardrobe, at least you know they're there!
                     Add your watches, scarf, rings, and other accessories with the snap of a finger.
                 </p>
-                <p> <input type="button" value="Look in Closet" onmouseover="overBtn(this)" onmouseout="outBtn(this)"onclick="newDoc4()"></p>
+                <p> <input type="button" value="Look in Closet" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="newDoc4()"></p>
             </div>
 
         </div>
-                <p>
+        <p>
             <input id="buttonloc" type="submit" value="go back " onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig', 'swap');">
         </p>
     </div>
-     
+
 </body>
     <!--Initiate WOW js, can be at the bottom of your file -->
     <script>

@@ -156,16 +156,33 @@ function footer() {
     var x = document.getElementById("subheaderbar2");
     x.getElementsByTagName("p")[0].innerText = "Created by Divya";
     x.getElementsByTagName("p")[0].style.fontSize = "20px";
-    x.getElementsByTagName("p")[0].style.color = "#4b0202";
+    x.getElementsByTagName("p")[0].style.color = "white";
     
 }
 
-function GetVilla() {
-    var villaArray = new Array(0);
-    var userResponse = confirm('Would you like to check the availability of a Villa?');
-    while (userResponse) {
-        var villa = prompt('Please enter the name of a villa');
-        userResponse = confirm('Would you like to add another Villa?');
-        villaArray.push(villa);
+function numberguess() {
+
+    x = Math.floor(Math.random() * 10) + 1;  // returns a number between 1 and 10
+    console.log(x);
+    var use = new Array(0);
+    for (var i = 0; i < 3; i++) {
+        var userResponse = prompt('Enter a Number between 1 and 10');
+        use.push(userResponse);
     }
+
+    alert("you are numbers :"+use);
+   for (var i = 0; i < 3; i++) {
+        if (x == use[i]) {
+            alert('You guessed Correct')
+        }
+        
+    }
+   
+   alert('You guessed Wrong')
+    alert('Random Number was ' + x)
 }
+
+
+    
+
+
