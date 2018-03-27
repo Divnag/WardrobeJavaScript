@@ -166,26 +166,33 @@ function numberguess() {
     console.log(x);
     var use = new Array(0);
     for (var i = 0; i < 3; i++) {
-        var userResponse = prompt('Enter a Number between 1 and 10');
+        var userResponse = prompt('Welcome to the Number Guessing Game.Enter a Number between 1 and 10');
         use.push(userResponse);
     }
 
 
     alert('Random Number was ' + x)
-    alert("you are numbers :" + use);
-   
-    for (var i = 0; i < 3; i++)
+    alert("Numbers you guessed :" + use);
+    
+    var flag = 0;
+    for (var i = 0; i < use.length; i++)
      {
         if (x == use[i]) {
-            alert('Youre  guessed Correct')
-           
+            flag = 1;
+            break;         
         }
+       
         else {
-            alert('Youre guessed Wrong')
+            flag = 0;
+       
         }
        
     }
-   
+    if (flag == 1)
+        alert('You  guessed Correctly')
+
+    else
+        alert('You guessed Wrong')
    
    }
 
